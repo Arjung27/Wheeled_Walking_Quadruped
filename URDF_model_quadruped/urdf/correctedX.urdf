@@ -1,0 +1,683 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="correctedX">
+  <link
+    name="Base">
+    <inertial>
+      <origin
+        xyz="3.05311331771918E-16 -1.11022302462516E-16 -0.0293845287670849"
+        rpy="0 0 0" />
+      <mass
+        value="5.72299502760058" />
+      <inertia
+        ixx="0.0838051740178236"
+        ixy="1.07898325217893E-05"
+        ixz="1.44892603126339E-17"
+        iyy="0.174992079709937"
+        iyz="1.22782652502483E-17"
+        izz="0.23668653759848" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://correctedX/meshes/Base.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://correctedX/meshes/Base.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="LFThigh">
+    <inertial>
+      <origin
+        xyz="-0.0387578568606957 0.039589515900732 -0.0212016687341889"
+        rpy="0 0 0" />
+      <mass
+        value="0.812325047815779" />
+      <inertia
+        ixx="0.00424037590071737"
+        ixy="0.00346701885665273"
+        ixz="0.000273963146360504"
+        iyy="0.00409314939372606"
+        iyz="-0.000279841797704061"
+        izz="0.00801849587199561" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://correctedX/meshes/LFThigh.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://correctedX/meshes/LFThigh.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LFHipJ"
+    type="continuous">
+    <origin
+      xyz="0.289999999999996 0.2 0"
+      rpy="1.5707963267949 -1.5707963267949 0" />
+    <parent
+      link="Base" />
+    <child
+      link="LFThigh" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="LFShin">
+    <inertial>
+      <origin
+        xyz="-0.00478824523565313 -0.0667368478021353 -0.00408848059505523"
+        rpy="0 0 0" />
+      <mass
+        value="0.66429466740859" />
+      <inertia
+        ixx="0.00591198422638477"
+        ixy="-0.000394422962493395"
+        ixz="-1.88033950698927E-05"
+        iyy="0.000429105284715045"
+        iyz="-0.000262074988473659"
+        izz="0.00610154014164887" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://correctedX/meshes/LFShin.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://correctedX/meshes/LFShin.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LFKnee"
+    type="continuous">
+    <origin
+      xyz="-0.20287281059363 0.207226018448076 -0.05"
+      rpy="-3.14159265358979 0 2.34557986744127" />
+    <parent
+      link="LFThigh" />
+    <child
+      link="LFShin" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="LeftFrontWheel">
+    <inertial>
+      <origin
+        xyz="1.11022302462516E-16 0 -0.00799999999999998"
+        rpy="0 0 0" />
+      <mass
+        value="0.0401045153174185" />
+      <inertia
+        ixx="1.08673877032686E-05"
+        ixy="-1.27054942088145E-21"
+        ixz="6.81872803857465E-22"
+        iyy="1.08673877032686E-05"
+        iyz="1.86982953664045E-22"
+        izz="2.00321016958556E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://correctedX/meshes/LeftFrontWheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://correctedX/meshes/LeftFrontWheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LeftFrontWheelJoint"
+    type="continuous">
+    <origin
+      xyz="-0.0208189655172384 -0.289251742734234 -0.002"
+      rpy="0 0 -1.64264767058275" />
+    <parent
+      link="LFShin" />
+    <child
+      link="LeftFrontWheel" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="RightFrontThigh">
+    <inertial>
+      <origin
+        xyz="0.0387578568606952 -0.0395895159007323 0.0212016687341888"
+        rpy="0 0 0" />
+      <mass
+        value="0.81232504781578" />
+      <inertia
+        ixx="0.00424037590071745"
+        ixy="0.00346701885665273"
+        ixz="0.000273963146360501"
+        iyy="0.00409314939372598"
+        iyz="-0.000279841797704064"
+        izz="0.00801849587199561" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://correctedX/meshes/RightFrontThigh.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://correctedX/meshes/RightFrontThigh.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RightFrontHip"
+    type="continuous">
+    <origin
+      xyz="0.29 -0.2 0"
+      rpy="1.5707963267949 1.5707963267949 0" />
+    <parent
+      link="Base" />
+    <child
+      link="RightFrontThigh" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="RightFrontShin">
+    <inertial>
+      <origin
+        xyz="-1.51167381730599E-05 0.0669083994614005 0.0209115194049448"
+        rpy="0 0 0" />
+      <mass
+        value="0.664294667408591" />
+      <inertia
+        ixx="0.00594021167175918"
+        ixy="2.24027883792968E-06"
+        ixz="-5.93632919882628E-08"
+        iyy="0.000400877839340645"
+        iyz="0.000262748670264234"
+        izz="0.00610154014164887" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://correctedX/meshes/RightFrontShin.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://correctedX/meshes/RightFrontShin.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RightFrontKnee"
+    type="continuous">
+    <origin
+      xyz="0.202872810593622 -0.207226018448081 0.025"
+      rpy="0 0 -0.724161442360665" />
+    <parent
+      link="RightFrontThigh" />
+    <child
+      link="RightFrontShin" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="RightFrontWheel">
+    <inertial>
+      <origin
+        xyz="0 0 0.00800000000000001"
+        rpy="0 0 0" />
+      <mass
+        value="0.0401045153174186" />
+      <inertia
+        ixx="1.08673877032686E-05"
+        ixy="1.27054942088145E-21"
+        ixz="-4.72413183558584E-23"
+        iyy="1.08673877032686E-05"
+        iyz="-5.30984571681279E-23"
+        izz="2.00321016958557E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://correctedX/meshes/RightFrontWheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://correctedX/meshes/RightFrontWheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RightFrontWheelJoint"
+    type="continuous">
+    <origin
+      xyz="0 0.29 0.00700000000000001"
+      rpy="0 0 1.5707963267949" />
+    <parent
+      link="RightFrontShin" />
+    <child
+      link="RightFrontWheel" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="LeftRearThight">
+    <inertial>
+      <origin
+        xyz="0.0387578568606952 0.0395895159007324 -0.0212016687341889"
+        rpy="0 0 0" />
+      <mass
+        value="0.812325047815779" />
+      <inertia
+        ixx="0.00424037590071745"
+        ixy="-0.00346701885665273"
+        ixz="-0.000273963146360501"
+        iyy="0.00409314939372597"
+        iyz="-0.000279841797704064"
+        izz="0.0080184958719956" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://correctedX/meshes/LeftRearThight.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://correctedX/meshes/LeftRearThight.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LeftRearJoint"
+    type="continuous">
+    <origin
+      xyz="-0.29 0.2 0"
+      rpy="1.5707963267949 1.5707963267949 0" />
+    <parent
+      link="Base" />
+    <child
+      link="LeftRearThight" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="LeftRearShin">
+    <inertial>
+      <origin
+        xyz="-1.51167381730395E-05 0.0669083994614006 -0.00408848059505501"
+        rpy="0 0 0" />
+      <mass
+        value="0.66429466740859" />
+      <inertia
+        ixx="0.00594021167175917"
+        ixy="2.24027883792944E-06"
+        ixz="-5.93632919882906E-08"
+        iyy="0.000400877839340643"
+        iyz="0.000262748670264234"
+        izz="0.00610154014164886" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://correctedX/meshes/LeftRearShin.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://correctedX/meshes/LeftRearShin.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LeftRearKnee"
+    type="continuous">
+    <origin
+      xyz="0.202872810593622 0.207226018448081 -0.05"
+      rpy="3.14159265358979 0 0.724161442360665" />
+    <parent
+      link="LeftRearThight" />
+    <child
+      link="LeftRearShin" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="LeftRearWheel">
+    <inertial>
+      <origin
+        xyz="0 -6.50521303491303E-19 -0.00800000000000001"
+        rpy="0 0 0" />
+      <mass
+        value="0.0401045153174185" />
+      <inertia
+        ixx="1.08673877032685E-05"
+        ixy="1.27054942088145E-21"
+        ixz="6.28608726114599E-22"
+        iyy="1.08673877032685E-05"
+        iyz="8.98964126596292E-22"
+        izz="2.00321016958557E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://correctedX/meshes/LeftRearWheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://correctedX/meshes/LeftRearWheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LeftRearWheelJoint"
+    type="continuous">
+    <origin
+      xyz="0 0.29 -0.00199999999999992"
+      rpy="0 0 1.5707963267949" />
+    <parent
+      link="LeftRearShin" />
+    <child
+      link="LeftRearWheel" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="RightRearThigh">
+    <inertial>
+      <origin
+        xyz="0.0387578568606951 0.0395895159007324 0.0212016687341888"
+        rpy="0 0 0" />
+      <mass
+        value="0.81232504781578" />
+      <inertia
+        ixx="0.00424037590071745"
+        ixy="-0.00346701885665273"
+        ixz="0.000273963146360501"
+        iyy="0.00409314939372598"
+        iyz="0.000279841797704065"
+        izz="0.00801849587199561" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://correctedX/meshes/RightRearThigh.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://correctedX/meshes/RightRearThigh.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RightRearHip"
+    type="continuous">
+    <origin
+      xyz="-0.29 -0.2 0"
+      rpy="1.5707963267949 1.5707963267949 0" />
+    <parent
+      link="Base" />
+    <child
+      link="RightRearThigh" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="RightRearShin">
+    <inertial>
+      <origin
+        xyz="-0.00478824523565417 -0.0667368478021352 0.0209115194049447"
+        rpy="0 0 0" />
+      <mass
+        value="0.664294667408591" />
+      <inertia
+        ixx="0.00591198422638477"
+        ixy="-0.000394422962493481"
+        ixz="-1.88033950698971E-05"
+        iyy="0.000429105284715057"
+        iyz="-0.000262074988473661"
+        izz="0.00610154014164888" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://correctedX/meshes/RightRearShin.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://correctedX/meshes/RightRearShin.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RightRearKnee"
+    type="continuous">
+    <origin
+      xyz="0.202872810593622 0.207226018448081 0.0250000000000001"
+      rpy="0 0 0.796012786148536" />
+    <parent
+      link="RightRearThigh" />
+    <child
+      link="RightRearShin" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="RightRearWheel">
+    <inertial>
+      <origin
+        xyz="1.38777878078145E-17 6.93889390390723E-18 0.00800000000000001"
+        rpy="0 0 0" />
+      <mass
+        value="0.0401045153174186" />
+      <inertia
+        ixx="1.08673877032686E-05"
+        ixy="-1.27054942088145E-21"
+        ixz="3.13115167126485E-23"
+        iyy="1.08673877032686E-05"
+        iyz="-1.53038642499832E-23"
+        izz="2.00321016958557E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://correctedX/meshes/RightRearWheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://correctedX/meshes/RightRearWheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RightRearWheelJoint"
+    type="continuous">
+    <origin
+      xyz="-0.0208189655172415 -0.289251742734235 0.0069999999999999"
+      rpy="0 0 -1.64264767058277" />
+    <parent
+      link="RightRearShin" />
+    <child
+      link="RightRearWheel" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+</robot>
